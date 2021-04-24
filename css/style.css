@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+.big-image-block > img {
+    width: 100%;
+    height: 599px;
+}
+
+.small-images-block > img {
+    width: 329px;
+}
+
+.top-margin {
+    margin-top: 3px;
+}
+
+.middle-image {
+    width: 22%;
+}
+
+.small-images-block {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 4px;
+}
+
+.container, .first-block-container, .third-block-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.first-block-container, .third-block-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 600px;
+    justify-content: space-evenly;
+}
+
+
+.second-block-container > img {
+    width: 329px;
+    margin-top: 4px;
+}
+
+.second-block-container {
+    margin-bottom: 7px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 4px;
+}
+
+.third-images {
+    margin-right: 4px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 98%;
+    margin: 0 auto;
+}
+
+li {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: grey;
+}
+
+
+.buttons {
+    width: 29%;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+main > p {
+    font-family: sans-serif;
+    color: #b7b5b5;
+    font-weight: bold;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: #474545;
+    padding-top: 73px;
+    position: relative;
+    z-index: 1;
+    bottom: 32px;
+}
+
+nav {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background-color: #272727;
+}
+
+header {
+    position: fixed;
+    border-bottom: 2px solid black;
+    width: 100%;
+    z-index: 1000;
+}
+
+#checkForm {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+#select {
+    display: none;
+}
+
+#themeButtons {
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+footer {
+    position: fixed;
+    padding: 0 13px 0 13px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272727;
+    border-top: 2px solid black;
+    bottom: 0;
+    z-index: 10000;
+    width: 98%;
+}
+
+footer > p {
+    color: #b7b5b5;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    color: #b7b5b5;
+}
+
+label {
+    color: #73c6db;
+    font-size: 15px;
+}
+
+.title {
+    animation-name: title;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes title {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+
+@media all and (max-width: 1080px) {
+
+    #checkForm {
+        display: none;
+    }
+
+    .buttons {
+        width: 35%;
+    }
+
+    #themeButtons {
+        display: flex;
+    }
+
+    .first-block-container, .third-block-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .third-block-container {
+        flex-direction: column-reverse;
+    }
+
+    .big-image-block > img {
+        height: auto;
+        width: 98%;
+        margin: 0 auto;
+    }
+
+    .small-images-block {
+        width: 99%;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .small-images-block > img {
+        margin-top: 5px;
+    }
+
+    .top-margin {
+        margin-top: 0px;
+    }
+
+    .third-images {
+        margin-right: 0px;
+    }
+
+    footer > p {
+        width: 50%;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media all and (max-width: 640px) {
+    #select {
+        display: block;
+    }
+
+    footer {
+        flex-direction: column;
+        height: 50px;
+        padding: 3px;
+    }
+
+    #themeButtons {
+        display: none;
+    }
+
+    #checkForm {
+        display: none;
+    }
+}
